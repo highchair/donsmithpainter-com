@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+
+  {% include head.html %}
+
+  <body class="layout__{{ page.layout }} page__{{ page.body-class }}">
+    <a href="#nav" class="sr-only sr-only-focusable">Skip to Navigation</a>
+    <div id="top" class="l__wrapper">
+      <header class="l__header header">
+        <p class="header__title"><span class="u__text__to-upper"><a href="{{ site.baseurl }}" title="Back to Home">Donald Smith</a></span>, painter</p>
+      </header>
+
+      {{ content }}
+
+      {% include navigation.html %}
+      
+      <footer class="l__footer footer">
+        <p class="© u__text__small">&copy; 1967 to {{ 'now' | date: '%Y' }} Donald (“Don”) Smith.<br> The images on this website are copyrighted and may not be downloaded or reproduced. </p>
+      </footer>
+    </div>
+    
+    {% if page.permalink == '/' %}
+      {% include scripts.html %}
+    {% endif %}
+  </body>
+</html>

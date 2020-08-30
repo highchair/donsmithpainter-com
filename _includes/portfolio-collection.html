@@ -1,0 +1,15 @@
+{% assign items_raw = site.portfolio | where: 'type', page.type %}
+{% assign items = items_raw | sort: 'year' | reverse %}
+<h1 class="page__title">{{ page.title }}</h1>
+
+{% if items.size >= 1 %}
+  <ul>
+    {% for item in items %}
+    <li>
+      <a href="{{ item.url }}">{{ item.title }}, {{ item.year }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="query--empty">Sorry, no items found.</p>
+{% endif %}

@@ -1,0 +1,17 @@
+          <div class="l__nav nav__container">
+            <nav class="nav" aria-label="primary">
+              <ul id="nav" class="list-unstyled nav__list" tabindex="-1">
+              {% for nav in site.data.navigation %}
+                <li class="nav__item nav__item--parent">
+                  <a href="{{ site.baseurl }}{{ nav.href }}?{{ "now" | date: "%Y%m%d-%H%M" }}" class="nav__link{% if nav.children != null %} nav__link--has-children{% endif %}">
+                    {{ nav.title }}
+                    {% if nav.children != null %}
+                    <span class="nav__child-mark">&gt;</span>
+                    {% endif %}
+                  </a>                  
+                </li>
+              {% endfor %}
+              </ul>
+            </nav>
+          </div>
+          
