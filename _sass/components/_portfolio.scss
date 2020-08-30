@@ -1,0 +1,29 @@
+.portfolio {
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    margin: 0 -1rem;
+  }
+  
+  &__item {
+    flex: 1 0 100%;
+    padding: 0 1rem 2rem;
+    
+    @include breakpoint-up(small) {
+      flex: 1 0 50%;
+    }
+    
+    @include breakpoint-up(medium) {
+      flex: 1 0 33.3%;
+    }
+  }
+  
+  &__title {
+    padding-top: 0.5rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

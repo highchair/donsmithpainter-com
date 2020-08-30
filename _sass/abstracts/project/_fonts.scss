@@ -1,0 +1,28 @@
+// Define a "System" font stack for fallbacks
+@font-face {
+  font-family: 'System Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local(".SFNSText-Light"),
+       local("Roboto-Light"),
+       local(".HelveticaNeueDeskInterface-Light"),
+       local("Ubuntu Light"),
+       local("Segoe UI Light"),
+       local("DroidSans"),
+       local("Tahoma");
+}
+
+// Define the family and weights
+$font-stack__sans: 'System Sans', 'Segoe UI', sans-serif;
+$font-stack__serif: Georgia, TimesNewRoman, 'Times New Roman', serif;
+$font-stack__mono: monospace;
+
+$font-weight__normal: 500;
+$font-weight__bold: bold;
+
+$font-weight__custom__normal: 400;
+$font-weight__custom__bold: bold;
+
+$line-height__base: 1.5;
+$line-height__tight: 1.125;
+$line-height__loose: 1.625;

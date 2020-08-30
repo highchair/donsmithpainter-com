@@ -1,0 +1,119 @@
+// General global styles. Some override settings in USWDS
+
+
+
+// Placeholders to extend
+// To keep things DRY
+%fluid-gutter {
+  @include fluid-units(
+    'padding-left' 'padding-right',
+    $gutter-min,
+    $gutter-max,
+    strip-unit(rem(bp(small))),
+    strip-unit(rem(bp(large)))
+  );
+}
+
+%fluid-gutter-l {
+  @include fluid-units(
+    'padding-left',
+    $gutter-min,
+    $gutter-max,
+    strip-unit(rem(bp(small))),
+    strip-unit(rem(bp(large)))
+  );
+}
+
+%fluid-gutter-r {
+  @include fluid-units(
+    'padding-right',
+    $gutter-min,
+    $gutter-max,
+    strip-unit(rem(bp(small))),
+    strip-unit(rem(bp(large)))
+  );
+}
+
+// Flexible gutter helper
+%margin-right {
+  @include fluid-units('margin-right', $gutter-min, $gutter-max, $min-vw, $max-vw);
+}
+
+%margin-left {
+  @include fluid-units('margin-left', $gutter-min, $gutter-max, $min-vw, $max-vw);
+}
+
+// Vertical rhythm
+%fluid-vertical {
+  @include fluid-units(
+    'padding-top' 'padding-bottom',
+    $gutter-min,
+    $gutter-max,
+    strip-unit(rem(bp(small))),
+    strip-unit(rem(bp(large)))
+  );
+}
+
+%fluid-vertical-pt {
+  @include fluid-units(
+    'padding-top',
+    $gutter-min,
+    $gutter-max,
+    strip-unit(rem(bp(small))),
+    strip-unit(rem(bp(large)))
+  );
+}
+
+%fluid-vertical-mt {
+  @include fluid-units(
+    'margin-top',
+    $gutter-min,
+    $gutter-max,
+    strip-unit(rem(bp(small))),
+    strip-unit(rem(bp(large)))
+  );
+}
+
+%fluid-vertical-pb {
+  @include fluid-units(
+    'padding-bottom',
+    $gutter-min,
+    $gutter-max,
+    strip-unit(rem(bp(small))),
+    strip-unit(rem(bp(large)))
+  );
+}
+
+%fluid-vertical-mb {
+  @include fluid-units(
+    'margin-bottom',
+    $gutter-min,
+    $gutter-max,
+    strip-unit(rem(bp(small))),
+    strip-unit(rem(bp(large)))
+  );
+}
+
+
+// Borders
+%border-top {
+  border-top: $border-design__base solid palette('blue');
+  
+  @include breakpoint-up(medium) {
+    border-top-width: $border-design__md;
+  }
+  @include breakpoint-up(x-large) {
+    border-top-width: $border-design__lg;
+  }
+}
+
+%border-left {
+  border-left: $border-design__base solid palette('blue');
+  
+  @include breakpoint-up(medium) {
+    border-left-width: $border-design__md;
+  }
+  @include breakpoint-up(x-large) {
+    border-left-width: $border-design__lg;
+  }
+}

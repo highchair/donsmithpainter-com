@@ -1,0 +1,173 @@
+//<figure class="item__figure">
+//  <p class="item__image">
+//    <img src="{{ site.baseurl }}{{ site.port_path }}{{ page.title }}.jpg" class="img--rwd {{ page.scale }}" alt="{{ page.type | capitalize }}, {{ page.medium | capitalize }}, {{ page.year }}, {{ page.dimensions | replace: "x", "by" }} inches" />
+//  </p>
+//  <figcaption class="item__caption">
+//    <p class="u__text__small">{{ page.medium | capitalize }}, {{ page.dimensions }}&quot;, {{ page.year }}</p>
+//  </figcaption>
+//</figure>
+
+//<footer class="item__footer">
+//  <nav class="item__nav">
+//    <p class="item__nav__item">
+//      <a href="/portfolio/img-1105" class="item__nav__link item__nav__prev">&lt;<span class="sr-only"> Previous</span></a>
+//    </p>
+//    <ul class="list-unstyled item__nav__list" role="navigation" aria-lang="Portfolio">      
+//      <li class="item__nav__item">
+//        <a href="/portfolio/img-0831" class="item__nav__link item__nav__square"><span class="sr-only">img-0831</span></a>
+//      </li>
+//    </ul>
+//  </nav>
+//</footer>
+
+.item {
+  &__figure {
+    border-bottom: 1px solid palette('red');
+    padding-bottom: 1rem;
+    
+    .page__home & {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    img {
+      margin: 0 auto;
+    }
+  }
+  
+  /*p*/&__image {
+    position: relative;
+
+    @include breakpoint-up(medium) {
+      height: 60vh;
+      
+      img {
+        //max-height: 60vh;
+        $max-width__large: 100%;
+        max-width: $max-width__large;
+        
+        // Center vertically
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        &.tiny { max-height: (  $max-width__large * 0.45); } // 50 - 20
+        &.small { max-height: ( $max-width__large * 0.60); } // 75 - 25
+        &.medium { max-height: ($max-width__large * 0.75); } // 90 - 15
+        &.large { max-height: ( $max-width__large * 0.90); } // 100 - 10
+        &.xlarge { max-height: $max-width__large; }
+      }
+      
+      .page__home & {
+        height: 73vh;
+      }
+    }
+    
+    @include breakpoint-up(large) {
+      height: 56vh;
+      
+      .page__home & {
+        height: 59vh;
+      }
+    }
+  }
+  
+  &__caption {
+    padding-top: 1rem;
+    text-align: center;
+    
+    @include breakpoint-up(large) {
+      text-align: right;
+    }
+  }
+  
+  &__footer {
+    padding-top: 1rem;
+    
+    @include breakpoint-up(large) {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+  
+  &__subtitle {}
+  
+  &__nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 -0.75rem;
+
+    &__list {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 0.325rem;
+    }    
+
+    &__item {
+      
+      &--prev,
+      &--next {
+        min-width: em(34);
+      }
+      
+      &--prev {
+        margin-right: auto;
+      }
+      
+      &--next {
+        margin-left: auto;
+      }
+    }
+    
+    &__link {
+      @include special-focus;
+      display: block;
+      padding: 0.5rem;
+      text-decoration: none;
+      
+      @include hover-focus-active {
+        &.item__nav__square::before {
+          background-color: palette('red');
+        }
+        
+        &.item__nav--active:before {
+          background-color: palette('gray-400');
+        }
+      }
+    }
+    
+    &__square {
+      &::before {
+        background-color: palette('white');
+        border: 2px solid palette('red');
+        content: '';
+        display: block;
+        height: 1rem;
+        width: 1rem;
+        transition: $transition;
+      }
+      
+      &.item__nav--active:before {
+        background-color: palette('gray-400');
+        border-color: palette('gray-500');
+        cursor: default;
+      }
+    }
+    
+    &__prev,
+    &__next {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    
+    &__prev {}
+    
+    &__next {}
+  }
+}

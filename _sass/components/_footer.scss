@@ -1,0 +1,9 @@
+.footer {
+  @extend %fluid-gutter;
+  @extend %fluid-vertical;
+  
+  .© {
+    color: palette('gray-500');
+    text-align: center;
+  }
+}

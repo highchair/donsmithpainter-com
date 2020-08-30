@@ -14,12 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Donald Smith painter
-description: Portfolio website for Donald Smith
+title: Donald Smith, painter
+description: Portfolio website for Donald Smith — painter, artist, and author in Rhode Island.
 
 baseurl: "/" # the subpath of your site, e.g. /blog
 port: 4030
-url: "http://www.donsmithpainter.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://donsmithpainter.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Build settings
@@ -33,6 +33,8 @@ kramdown:
 # permalink: /:categories/:year/:month/:day/:title:output_ext
 permalink: /:year/:month/:title:output_ext
 relative_permalinks: false
+image_path: "assets/img/"
+port_path: "assets/portfolio/"
 
 collections:
   portfolio:
@@ -62,6 +64,7 @@ plugins:
 # to override the default setting.
 exclude:
   - .gitignore
+  - favicon_package
   - Gemfile
   - Gemfile.lock
   - LICENSE

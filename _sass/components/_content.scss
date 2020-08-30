@@ -1,0 +1,9 @@
+.content {
+  @extend %fluid-gutter;
+  @extend %fluid-vertical;
+  @extend %border-left;
+  background-color: palette('white');
+  color: palette(gray-700);
+  
+  &__article {}
+}

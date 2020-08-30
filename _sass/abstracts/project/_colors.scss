@@ -1,0 +1,35 @@
+//
+// Color system
+//
+
+$colors: (
+  'white': #fff,
+  gray-400: #8a9999, // h180 s10 b60
+  gray-500: #778585, // h180 s10 b52
+  gray-600: #5c6666, // h180 s10 b40
+  gray-700: #4c5454, // h180 s10 b32
+  gray-800: #394040, // h180 s10 b25
+  gray-900: #292e2e, // h180 s10 b18
+  'black': #101010,
+  'blue': #366,      // h180 s50 b18
+  'blue-light': #699,
+  'red': #900,
+  'cream': #efefcf,  // h60 s13 b94
+);
+
+// Helper
+@function palette($color) {
+  @return map-get($colors, $color);
+}
+
+
+// Generic variables
+$color__body-fg: palette('white');
+// Make the body bg the same as the footer bg.
+// This makes the page seamless when the body is shorter than the viewport height.
+$color__body-bg: palette('black');
+
+$color__link: palette('blue');
+$color__link--hover: darken($color__link, 15);
+$color__link--active: palette('red');
+$color__borders: palette('red');

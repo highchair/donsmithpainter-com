@@ -1,0 +1,55 @@
+//<div class="l__nav nav__container">
+//  <nav class="nav" aria-label="primary">
+//    <ul class="nav__list">
+//      <li class="nav__item nav__item--parent">
+//        <a href="/" class="nav__link">Home</a>                  
+//      </li>
+//      <li class="nav__item nav__item--parent">
+//        <a href="/portfolio/expressionist/" class="nav__link nav__link--has-children">
+//          Portfolio
+//          <span class="nav__child-mark">&gt;</span>
+//        </a>                  
+//      </li>
+
+.nav {  
+  &__container {
+    @extend %fluid-gutter;
+    @extend %border-left;
+    background-color: palette('cream');
+    border-top: 1px solid palette('red');
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: -0.75em 0 -0.625em -1em;
+    
+    @include breakpoint-up(medium) {
+      flex-flow: row nowrap;
+    }
+  }
+  
+  &__item {
+    flex: 1 0 50%;
+    
+    @include breakpoint-up(medium) {
+      flex: 1 0 auto;
+    }
+    
+    &--parent {}
+  }
+  
+  &__link {
+    @include special-focus;
+    display: block;
+    font-weight: $font-weight__bold;
+    padding: 0.75em 1em 0.625em;
+    text-decoration: none;
+    
+    &--has-children {}
+  }
+  
+  &__child-mark {}
+}

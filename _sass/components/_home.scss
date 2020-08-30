@@ -1,0 +1,6 @@
+#randomize {
+  
+  .no-js & li.hide {
+    @include hide();
+  }
+}

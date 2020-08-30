@@ -1,0 +1,34 @@
+// Utilities
+
+// Image responsiveness
+.img {
+  &--rwd {
+    // The BS4 framework is not opinionated
+    // Add this class to force an image to be responsive
+    display: block;
+    max-width: 100%;
+  }
+}
+
+//Screen Reader
+// A mixin but also a utility class
+.sr-only {
+  @include sr-only;
+}
+.sr-only-focusable {
+  @include sr-only-focusable;
+}
+
+.u {
+  &__text {
+    &__small {
+      @include one-element-size(micro);
+      letter-spacing: ($kerning * 2);
+    }
+    
+    &__to-upper {
+      letter-spacing: ($kerning * 2);
+      text-transform: uppercase;
+    }
+  }
+}
