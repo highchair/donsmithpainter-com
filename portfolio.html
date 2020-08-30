@@ -1,0 +1,32 @@
+---
+layout: portfolio-lander
+html-title: Portfolio
+permalink: portfolio/
+---
+
+{% for nav in site.data.navigation %}
+  {% if nav.title == 'Portfolio' %}
+    <ul class="list-unstyled portfolio__list">
+      {% if nav.children != null %}
+        {% for children in nav.children %}
+      <li class="portfolio__item">
+      {% comment %} Find and output the first image in each type {% endcomment %}
+        {% assign items_raw = site.portfolio | where: 'type', children.type %}
+        {% assign items = items_raw | sort: 'year' | reverse %}
+        {% for item in items limit:1 %}
+        <a href="{{ site.baseurl }}portfolio/{{ item.title }}.html?{{ "now" | date: "%Y%m%d-%H%M" }}" tabindex="-1" aria-hidden="true">
+          {% if children.item %}
+            {% assign image = children.item %}
+          {% else %}
+            {% assign image = item.title %}
+          {% endif %}
+          <img src="{{ site.baseurl }}{{ site.port_path }}{{ image }}.jpg" class="img--rwd" alt="{{ item.type | capitalize }}, {{ item.medium | capitalize }}, {{ item.year }}, {{ item.dimensions | replace: "x", "by" }} inches" />
+        </a>
+        <h2 class="h5 portfolio__title"><a href="{{ site.baseurl }}portfolio/{{ item.title }}.html?{{ "now" | date: "%Y%m%d-%H%M" }}">{{ children.title }}</a></h2>
+        {% endfor %}
+      </li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  {% endif %}
+{% endfor %}

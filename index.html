@@ -1,0 +1,31 @@
+---
+layout: page
+html-title: Welcome to the portfolio of Donald Smith
+permalink: /
+body-class: home
+---
+
+<h1 class="sr-only">Welcome to the Portfolio of Donald Smith</h1>
+
+<ul id="randomize" class="list-unstyled home home__images">
+{%- for nav in site.data.navigation -%}
+  {%- if nav.children != null -%}
+    {%- for child in nav.children -%}
+      {%- if child.item -%}
+        {%- assign image = child.item -%}
+        {%- assign class = 'hide' -%}
+        {%- if forloop.first -%}
+          {%- assign class = 'show' -%}
+        {%- endif -%}
+  <li class="{{ class }}">
+    <figure class="item__figure">
+      <p class="item__image">
+        <img src="{{ site.baseurl }}{{ site.port_path }}{{ image }}.jpg" class="img--rwd home__image {{ child.scale }}" alt="Don Smith paintings" />
+      </p>
+    </figure>
+  </li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endfor -%}
+</ul>
