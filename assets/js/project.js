@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(){
   
   (function cycle() { 
     $(items[i]).fadeIn(250)
-      .delay(4000)
+      .delay(5000)
       .fadeOut(250, cycle);
     i = ++i % items.length;
   })();
