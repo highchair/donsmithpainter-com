@@ -22,7 +22,7 @@ only the assets that have changed. The `JEKYLL_ENV` variable is assumed to be
 $ jekyll serve --I
 ```
 
-In a browser, open [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
+In a browser, open [http://127.0.0.1:4030/](http://127.0.0.1:4030/)
 
 ### Additional Flags
 
