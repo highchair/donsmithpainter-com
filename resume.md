@@ -29,10 +29,11 @@ Painting / Drawing / Printmaking
 ## Exhibitions
 _*Solo, **Juried, ***Group_
 
++ _2017:_ Chazan Gallery, Providence, Rhode Island
 + _2015:_ Faculty Show, Rhode Island College, Providence, Rhode Island
 + _2014:_ Newport Annual Juried Show, Newport, Rhode Island ***
 + _2014:_ Shelby Gallery, Ringling School of Art, Sarasota, Florida
-+ _2006_ Keller Library Gallery, Dexter, Montana
++ _2006:_ Keller Library Gallery, Dexter, Montana
 + _2005:_ Newport Art Museum, Newport, Rhode Island (50 new works) *
 + _2003:_ Recent Work, Wheeler Gallery, Providence, Rhode Island
 + _2002:_ Art Center, Sarasota, Small Painting ***
@@ -41,7 +42,7 @@ _*Solo, **Juried, ***Group_
 + _2000:_ Group Invitational: Attleboro, Massachusetts
 + _1996:_ Sabbatical/Retrospective, Bannister Gallery, Rhode Island College, Providence, Rhode Island *
 + _1992:_ Recent Work, Wheeler Gallery, Providence, Rhode Island *
-+ _1990:_ Outstanding Alumni, Group Show, Bingham Gallery, University of Missouri , Columbia, Missouri ***
++ _1990:_ Outstanding Alumni, Group Show, Bingham Gallery, University of Missouri, Columbia, Missouri ***
 + _1989:_ Sabbatical Show, Bannister Gallery, Rhode Island College, Providence, Rhode Island *
 + _1988:_ Invitational Landscape: 6 Paintings, Duxbury Museum of Art, Duxbury, Massachusetts ***
 + _1988:_ 3 Person: Gallery 401, Jewish Community Center, Providence, Rhode Island***
@@ -75,6 +76,12 @@ _*Solo, **Juried, ***Group_
 + _1957:_ Group Show, Stephens College, Columbia, Missouri
 + _1957:_ Big Eight Invitational, University of Kansas, Lawrence, Kansas
 {: .list-unstyled .list-with-years }
+
+
+## Awards
+
++ _1956:_ Delta Phi Delta National Honorary Art Award
+
 
 ## Public &amp; Private Collections
 
