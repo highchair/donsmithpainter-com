@@ -54,24 +54,30 @@ html-title: Untitled
       <nav class="item__nav">
         <p class="item__nav__item item__nav__item--next">
           {% if next %}
-          <a href="{{ next.url }}.html#content" class="item__nav__link item__nav__next"  title="Next (Newer)"><span class="sr-only">Next </span>&lt;</a>
+          <a href="{{ next.url }}.html" class="item__nav__link item__nav__next"  title="Next (Newer)"><span class="sr-only">Next </span>&lt;</a>
           {% endif %}
         </p>
   
         <ul class="list-unstyled item__nav__list" role="navigation" aria-lang="Portfolio">      
           {% for item in items %}
           <li class="item__nav__item">
-            <a href="{{ item.url }}.html#content" class="item__nav__link item__nav__square {% if forloop.index == item_index %} item__nav--active{% endif %}" title="{{ item.year }}"><span class="sr-only">{{ item.title }}</span></a>
+            <a href="{{ item.url }}.html" class="item__nav__link item__nav__square {% if forloop.index == item_index %} item__nav--active{% endif %}" title="{{ item.year }}"{% if forloop.index == item_index %} aria-current="page"{% endif %}><span class="sr-only">{{ item.title }}</span></a>
           </li>
           {% endfor %}
         </ul>
   
         <p class="item__nav__item item__nav__item--prev">
           {% if prev %}
-          <a href="{{ prev.url }}.html#content" class="item__nav__link item__nav__prev" title="Previous (Older)">&gt;<span class="sr-only"> Previous</span></a>
+          <a href="{{ prev.url }}.html" class="item__nav__link item__nav__prev" title="Previous (Older)">&gt;<span class="sr-only"> Previous</span></a>
           {% endif %}
         </p>
       </nav>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var aCurrent = document.querySelectorAll('[aria-current="page"]');
+          aCurrent[0].focus();
+        });
+      </script>
     </footer>
     {% endif %}
   </article>

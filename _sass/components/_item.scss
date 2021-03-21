@@ -51,10 +51,10 @@
         top: 50%;
         transform: translateY(-50%);
         
-        &.tiny { max-height: (  $max-width__large * 0.45); } // 50 - 20
-        &.small { max-height: ( $max-width__large * 0.60); } // 75 - 25
-        &.medium { max-height: ($max-width__large * 0.75); } // 90 - 15
-        &.large { max-height: ( $max-width__large * 0.90); } // 100 - 10
+        &.tiny { max-height: (  $max-width__large * 0.60); }
+        &.small { max-height: ( $max-width__large * 0.70); }
+        &.medium { max-height: ($max-width__large * 0.80); }
+        &.large { max-height: ( $max-width__large * 0.90); }
         &.xlarge { max-height: $max-width__large; }
       }
       
