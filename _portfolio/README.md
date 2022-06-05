@@ -1,7 +1,7 @@
 
 ## Images Have Scale
 
-It is important to Don Smith that the images of his paitnings are displayed in a way that denotes a relationship between them. A small painting or watercolor should be relatively smaller on screen than any painting over 3 feet wide. 
+It is important to Don Smith that the images of his paintings are displayed in a way that denotes a relationship between them. A small painting or watercolor should be relatively smaller on screen than any painting over 3 feet wide. 
 
 We have a system in place for relative scale, and this is how it works: 
 
@@ -13,8 +13,8 @@ We have a system in place for relative scale, and this is how it works:
 
 CSS values for the sizes:
 
-* xlarge:
-* large: 
-* medium:
-* small: 
-* tiny: 
+* xlarge: 100% (of container size)
+* large:  90%
+* medium: 80%
+* small:  70%
+* tiny:   60%
