@@ -19,7 +19,7 @@ description: Portfolio website for Donald Smith — painter, artist, and author
 
 baseurl: "/" # the subpath of your site, e.g. /blog
 port: 4030
-url: "http://donsmithpainter.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://donsmithpainter.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Build settings
@@ -51,13 +51,6 @@ defaults:
 sass:
   sass_dir: _sass
   style: compressed
-
-
-# Plugins and extras
-plugins:
-- jekyll-autoprefixer
-- jekyll-github-metadata
-
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
